@@ -1,0 +1,55 @@
+.mainNav {
+  width: 100%;
+  height: 14.0rem;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 12.0rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title-the {
+  transform: rotate(90deg);
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.title-siren{
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6.2rem;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.nv-link{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5.0rem;
+    padding-bottom: 1.0rem;
+    border-bottom: 3px solid #F0F0F0;
+}
+
+.span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 0px;
+    color: #000000;
+    transition: 0.2s;
+    
+  
+}
+
+.span:hover{
+    border-bottom: 3px solid green;
+}
