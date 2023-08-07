@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Home.css";
 import GridAlbum from "../GridAlbum/GridAlbum";
 import BigCards from "../GenricComponents/VerticalCards/BigCards";
 import HorizontalCards from "../GenricComponents/HorizontalCards/HorizontalCards";
 import HorizontalSmall from "../GenricComponents/HorizontalSmall/HorizontalSmall";
 import bgImage from "../Assets/bg-image.jpg";
+import { contextApi } from "../../App";
 
-const Titles = ({ title }) => {
+
+export const Titles = ({ title }) => {
   return (
     <>
       <span className="sveral-title">{title}</span>
     </>
   );
 };
+ 
 
 const LastBoxes = ({isBorder}) => {
   return (
@@ -38,6 +41,8 @@ const LastBoxes = ({isBorder}) => {
 };
 
 const HomePage = () => {
+  const data = useContext(contextApi)
+  console.log(data);
   return (
     <>
       <GridAlbum />

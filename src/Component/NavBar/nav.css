@@ -46,7 +46,8 @@
     letter-spacing: 0px;
     color: #000000;
     transition: 0.2s;
-    
+   cursor: pointer; 
+   text-decoration: none; 
   
 }
 
