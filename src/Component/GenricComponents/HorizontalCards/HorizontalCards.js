@@ -1,22 +1,29 @@
 import React from "react";
 import "./HariStyle.css";
-import sampleImg from "../../Assets/sample.jpg";
-const HorizontalCards = () => {
+// import sampleImg from "../../Assets/sample.jpg";
+const HorizontalCards = ({ title, image, description, cat,index}) => {
+
+  function getFirst17Words(sentence) {
+    sentence = sentence.trim().replace(/\s+/g, ' ');
+    const words = sentence.split(' ');
+    const first17Words = words.slice(0, 17);
+    const result = first17Words.join(' ');
+    
+    return result;
+  }
   return (
-    <div className="main-cards">
+    <div className="main-cards" onClick={()=>{console.log("hello bro")}}>
       <div className="hariMain">
         <div className="hari-rw">
-          <img src={sampleImg} className="hari-image" alt="no data" />
+          <img src={image} className="hari-image" alt="no data" />
           <div className="hari-clm">
-            <span className="hari-txt">
-              Catch waves with an adventure guide
-            </span>
+            <span className="hari-txt">{title}</span>
             <span className="hari-sub">
-              Gujarat is vastly underrated and it’s a mystery to us why the
-              region isn’t more well-
+              {console.log(description+"  "+index)}
+              {`${getFirst17Words(description)}....load more`}
             </span>
             <div className="crd-rw">
-              <span className="news-sub">Travel</span>
+              <span className="news-sub">{cat}</span>
               <span className="new-date">/ August 21 2017</span>
             </div>
           </div>

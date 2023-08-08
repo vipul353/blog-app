@@ -3,6 +3,7 @@
     width: 31.8rem;
     background-color: #FCFCFC;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .main-cards{

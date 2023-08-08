@@ -49,28 +49,65 @@ const HomePage = () => {
       <div className="HomeMain">
         <Titles title={"The Latest"} />
         <div className="home-row">
-          <BigCards />
-          <BigCards />
-          <BigCards />
+          {
+            data.map((item,index)=>{
+              if (item.cat === 'Latest') {
+                return(
+                  <>
+                   <BigCards key={index} title={item.heading} image={item.image} description={item.description} cat={item.cat} />
+                  </>
+                )
+              }else return(
+              <>
+              </>);
+            
+            })
+          }
         </div>
         <Titles title={"Latest Articles"} />
         <div className="home-clm-main">
           <div className="home-row">
             <div className="home-clm-main">
-              <HorizontalCards />
-              <HorizontalCards />
-              <HorizontalCards />
-              <HorizontalCards />
+              {
+                data.map((item,index)=>{
+                   if ((item.cat === 'technology')&&((index>19)&&(index<24))) {
+                    return(
+                      <HorizontalCards key={index} index={index} title={item.Heading} image={item.image} description={item.Description} cat={item.cat} />
+                    )
+                   } else {
+                    return(
+                      <>
+                      </>
+                    )
+                   } 
+                })
+              }
+
               <div className="home-bg-img">
                 <img src={bgImage} alt="no data" />
               </div>
             </div>
             <div className="home-clm-width">
               <div className="ads"></div>
+              {
+                data.map((item,index)=>{
+                  console.log();
+                   if ((item.cat === 'fitness')&&((index>30)&&(index<35))) {
+                    return(
+                      <HorizontalSmall key={index} title={item.Heading} index={index} image={item.image} cat={item.cat} />
+                    )
+                   } else {
+                    return(
+                      <>
+                      </>
+                    )
+                   } 
+                })
+              }
+           
+              {/* <HorizontalSmall />
               <HorizontalSmall />
-              <HorizontalSmall />
-              <HorizontalSmall />
-              <HorizontalSmall />
+              <HorizontalSmall /> */}
             </div>
           </div>
         </div>

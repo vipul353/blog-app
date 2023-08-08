@@ -1,23 +1,21 @@
 import React from "react";
 import "./verticalStyle.css";
-import sampleImage from "../../Assets/sample.jpg";
+// import sampleImage from "../../Assets/sample.jpg";
 
-const BigCards = () => {
+const BigCards = ({title,image,description,cat}) => {
   return (
     <div className="main-cards">
       <div className="main-ver-cards">
-        <img src={sampleImage} className="crd-img" alt="no data" />
+        <img src={image} className="crd-img" alt="no data" />
         <div className="crd-txt">
           <span className="crd-txt-heading">
-            Joshua Tree Overnight Adventure
+            {title}
           </span>
           <span className="crd-txt-subtitle">
-            Gujarat is vastly underrated and it’s a mystery to us why the region
-            isn’t more well-known as a tourist destination. It has a plethora of
-            temples and palaces
+           {description}
           </span>
           <div className="crd-rw">
-            <span className="news-sub">Travel</span>
+            <span className="news-sub">{cat}</span>
             <span className="new-date">/ August 21 2017</span>
           </div>
         </div>

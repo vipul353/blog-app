@@ -24,6 +24,12 @@
 .hari-image{
     height: 16rem;
     width: 49rem;
+    overflow: hidden;
+}
+
+.hari-image img{
+    width: 100%;
+    height: auto;
 }
 
 .hari-clm{

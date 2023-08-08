@@ -1,22 +1,35 @@
 import React from "react";
 import "./HoriSmall.css";
-import SampleImg from "../../Assets/sample.jpg";
+// import SampleImg from "../../Assets/sample.jpg";
 
-const HorizontalSmall = () => {
+const HorizontalSmall = ( {image,title,cat,index}) => {
+  function getFirst17Words(sentence) {
+    sentence = sentence.trim().replace(/\s+/g, ' ');
+    const words = sentence.split(' ');
+    const first17Words = words.slice(0, 4);
+    const result = first17Words.join(' ');
+    
+    return result;
+  }
+
+  const number=(index)=>{
+   let n = index%30
+   return n;
+  }
   return (
     <div className="hori-small">
       <div className="hori-rw">
-        <img src={SampleImg} alt="no data"  className="hori-img"/>
+        <img src={image} alt="no data"  className="hori-img"/>
         <div className="hori-clm">
-          <span className="hori-txt">Catch waves with adventure guide</span>
+          <span className="hori-txt">{getFirst17Words(title)}</span>
           <div className="crd-rw">
-            <span className="news-sub">Travel</span>
+            <span className="news-sub">{cat}</span>
             <span className="new-date">/ August 21 2017</span>
           </div>
         </div>
        <div className="nm-clm">
        <span className="number">
-            2{' '}
+          {number(index)}
         </span>
        </div>
       </div>
