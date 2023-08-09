@@ -1,21 +1,21 @@
 import React from 'react'
 import './medium.css';
-import sample from '../../Assets/sample.jpg';
+// import sample from '../../Assets/sample.jpg';
 
-const Horizontalmedium = () => {
+const Horizontalmedium = ({title,image,index,cat}) => {
   return (
     <div className='medi-main'>
-        <img src={sample} alt='no data' className='medi-img'/>
+        <img src={image} alt='no data' className='medi-img'/>
         <div className='medi-row'>
           <span className='medi-titlle'>
-          Catch waves with an adventure guide
+          {title}
           </span>
           <span className='number'>
-                 2
+                 {index}
           </span>
         </div>
         <div className="crd-rw">
-              <span className="news-sub">Travel</span>
+              <span className="news-sub">{cat}</span>
               <span className="new-date">/ August 21 2017</span>
         </div>
     </div>
