@@ -1,7 +1,7 @@
 import React from "react";
 import "./HariStyle.css";
 import { useNavigate } from "react-router-dom";
-import BlogDetails from "../../BlogDetails/BlogDetails";
+// import BlogDetails from "../../BlogDetails/BlogDetails";
 // import sampleImg from "../../Assets/sample.jpg";
 const HorizontalCards = ({ title, image, description, cat,index}) => {
    
