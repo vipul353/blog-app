@@ -6,11 +6,14 @@ import Horizontalmedium from '../GenricComponents/HorizontalMedium/Horizontalmed
 import AllAdes from '../GenricComponents/AllAdes'
 // import { useContext } from 'react'
 import { contextApi } from '../../App'
+import Navbar from '../NavBar/Navbar'
 
 const Fittness = () => {
   const data = useContext(contextApi)
   return (
-    <div className="BolyMain">
+<>
+<Navbar/>
+<div className="BolyMain">
     <div className="bolyColm-one">
      <Titles title={'Fittness'}/>
      {data.map((item, index) => {
@@ -57,6 +60,7 @@ const Fittness = () => {
       <AllAdes/>
     </div>
   </div>
+</>
   )
 }
 

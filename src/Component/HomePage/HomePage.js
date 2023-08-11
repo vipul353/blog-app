@@ -6,6 +6,7 @@ import HorizontalCards from "../GenricComponents/HorizontalCards/HorizontalCards
 import HorizontalSmall from "../GenricComponents/HorizontalSmall/HorizontalSmall";
 import bgImage from "../Assets/bg-image.jpg";
 import { contextApi } from "../../App";
+import Navbar from "../NavBar/Navbar";
 
 
 export const Titles = ({ title }) => {
@@ -43,6 +44,7 @@ const HomePage = () => {
   console.log(data);
   return (
     <>
+     <Navbar />
       <GridAlbum />
       <div className="HomeMain">
         <Titles title={"The Latest"} />

@@ -6,11 +6,14 @@ import { Titles } from '../HomePage/HomePage'
 import AllAdes from '../GenricComponents/AllAdes'
 import { useContext } from 'react'
 import { contextApi } from '../../App'
+import Navbar from '../NavBar/Navbar'
 
 const Technology = () => {
   const data = useContext(contextApi)
   return (
-    <div className="BolyMain">
+<>
+<Navbar/>
+<div className="BolyMain">
     <div className="bolyColm-one">
      <Titles title={'Technology'}/>
      {data.map((item, index) => {
@@ -57,6 +60,7 @@ const Technology = () => {
       <AllAdes/>
     </div>
   </div>
+</>
   )
 }
 

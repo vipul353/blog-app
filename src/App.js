@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Navbar from "./Component/NavBar/Navbar";
 import HomePage from "./Component/HomePage/HomePage";
 import Bollywood from "./Component/Bollywood/Bollywood";
 import Hollywood from "./Component/Hollywood/Hollywood";
@@ -16,9 +15,11 @@ function App() {
   const [data] = useState(AllData);
   return (
     <>
-  
-      <contextApi.Provider value={data}>
-      <Navbar />
+   {/* <div style={{height:'100vh'}}>
+   <BlogNav/>
+   </div> */}
+    <contextApi.Provider value={data}>
+     
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/Bollywood" element={<Bollywood/>}/>

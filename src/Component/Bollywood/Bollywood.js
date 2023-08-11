@@ -6,12 +6,15 @@ import HorizontalSmall from "../GenricComponents/HorizontalSmall/HorizontalSmall
 import Horizontalmedium from "../GenricComponents/HorizontalMedium/Horizontalmedium";
 import AllAdes from "../GenricComponents/AllAdes";
 import { contextApi } from "../../App";
+import Navbar from "../NavBar/Navbar";
 
 const Bollywood = () => {
   const data = useContext(contextApi);
 
   return (
-    <div className="BolyMain">
+   <>
+   <Navbar/>
+   <div className="BolyMain">
       <div className="bolyColm-one">
         <Titles title={"Bollywood"} />
         {data.map((item, index) => {
@@ -63,6 +66,7 @@ const Bollywood = () => {
         <AllAdes />
       </div>
     </div>
+   </>
   );
 };
 
