@@ -60,6 +60,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .last-boxes{
@@ -71,6 +72,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.0rem;
+  overflow: hidden;
 }
 
 .last-boxes-title{
@@ -79,6 +81,7 @@
   font-weight: 500;
   color: black;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
    
 }
 
@@ -87,4 +90,29 @@
   font-weight: normal;
   color: #908D8D;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+.crd-rw{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding-top: 1.5rem; */
+}
+
+.news-sub{
+  color: #404040;
+  font-size: 1.7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding-right: 1.0rem;
+  overflow: hidden;
+}
+
+.new-date{
+  color: #b3aaaa;
+  font-size: 1.7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  overflow: hidden;
 }

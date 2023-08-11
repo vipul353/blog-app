@@ -1,5 +1,6 @@
 import React from "react";
 import "./HoriSmall.css";
+import { useNavigate } from "react-router-dom";
 // import SampleImg from "../../Assets/sample.jpg";
 
 const HorizontalSmall = ( {image,title,cat,index}) => {
@@ -16,8 +17,10 @@ const HorizontalSmall = ( {image,title,cat,index}) => {
    let n = index%30
    return n;
   }
+
+  const navigate = useNavigate()
   return (
-    <div className="hori-small">
+    <div className="hori-small" onClick={()=>{navigate(`/blogdetails/${index}`)}}>
       <div className="hori-rw">
         <img src={image} alt="no data"  className="hori-img"/>
         <div className="hori-clm">

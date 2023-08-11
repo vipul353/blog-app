@@ -14,7 +14,7 @@ const Technology = () => {
     <div className="bolyColm-one">
      <Titles title={'Technology'}/>
      {data.map((item, index) => {
-          if (item.cat === "technology" && index >= 20 && index <= 27) {
+          if (item.cat === "technology" && index >= 24 && index <= 30) {
             return (
               <HorizontalCards
                 key={index}
@@ -35,13 +35,13 @@ const Technology = () => {
       <Titles title={'Top Posts'}/>
       {data.map((item, index) => {
           console.log();
-          if (item.cat === "technology" && index >= 28 && index < 32) {
+          if (item.cat === "technology" && index >= 31 && index <= 36) {
             return (
               <>
                 {
-                  (index === 28)&& <Horizontalmedium cat={item.cat} image={item.image} index={index} title={item.Heading}/>
+                  (index === 31)&& <Horizontalmedium cat={item.cat} image={item.image} index={index} title={item.Heading}/>
                 }
-               { (index >= 29 && index < 32)&&<HorizontalSmall
+               { (index >= 32 && index < 36)&&<HorizontalSmall
                   key={index}
                   title={item.Heading}
                   index={index}

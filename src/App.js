@@ -9,12 +9,14 @@ import Fittness from "./Component/Fitness/Fittness";
 import Food from "./Component/Food/Food";
 import AllData from "./Data/AllData";
 import { createContext,useState } from 'react'
+import BlogDetails from "./Component/BlogDetails/BlogDetails";
 export const contextApi = createContext();
 
 function App() {
   const [data] = useState(AllData);
   return (
     <>
+  
       <contextApi.Provider value={data}>
       <Navbar />
       <Routes>
@@ -24,6 +26,7 @@ function App() {
         <Route path="/Techonoly" element={<Technology/>}/>
         <Route path="/Fitness" element={<Fittness/>}/>
         <Route path="/Food" element={<Food/>}/>
+        <Route path="/blogdetails/:id" element={<BlogDetails/>}/>
       </Routes>
       </contextApi.Provider>
     </>

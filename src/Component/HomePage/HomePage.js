@@ -17,22 +17,20 @@ export const Titles = ({ title }) => {
 };
  
 
-const LastBoxes = ({isBorder}) => {
+const LastBoxes = ({isBorder,title,desc,cat}) => {
   return (
     <>
       <div className="last-boxes" style={isBorder?{borderInline:'3px solid #F0F0F0'}:{borderInline:'none'}}>
         <span className="last-boxes-title">
-          Catch waves with an adventure guide
+          {title}
+          {/* Catch waves with an adventure guide */}
         </span>
         <span className="last-boxes-sub">
-          Gujarat is vastly underrated and it’s a mystery to us why the region
-          isn’t more well-known as a tourist destination. It has a plethora of
-          temples and palaces Gujarat is vastly underrated and it’s a mystery to
-          us why the region isn’t more well-known as a tourist destination. It
-          has a plethora of temples and palaces
+          {desc}
+        Gujarat is a hidden gem with temples, palaces, and rich culture. Its tourist potential deserves wider recognition
         </span>
         <div className="crd-rw">
-            <span className="news-sub">Travel</span>
+            <span className="news-sub">{cat}</span>
             <span className="new-date">/ August 21 2017</span>
           </div>
       </div>
@@ -70,7 +68,7 @@ const HomePage = () => {
             <div className="home-clm-main">
               {
                 data.map((item,index)=>{
-                   if ((item.cat === 'technology')&&((index>19)&&(index<24))) {
+                   if ((item.cat === 'technology')&&((index>24)&&(index<29))) {
                     return(
                       <HorizontalCards key={index} index={index} title={item.Heading} image={item.image} description={item.Description} cat={item.cat} />
                     )
@@ -92,9 +90,9 @@ const HomePage = () => {
               {
                 data.map((item,index)=>{
                   console.log();
-                   if ((item.cat === 'fitness')&&((index>30)&&(index<35))) {
+                   if ((item.cat === 'Food')&&((index>52)&&(index<57))) {
                     return(
-                      <HorizontalSmall key={index} title={item.Heading} index={index} image={item.image} cat={item.cat} />
+                      <HorizontalSmall key={index} title={item.heading} index={index} image={item.image} cat={item.cat} />
                     )
                    } else {
                     return(
@@ -113,9 +111,29 @@ const HomePage = () => {
         </div>
         <Titles title={"Latest Stories"} />
         <div className="last-box">
-          <LastBoxes />
-          <LastBoxes isBorder={true} />
-          <LastBoxes />
+        {
+                data.map((item,index)=>{
+                  console.log();
+                   if ((item.cat === 'bollywood')&&((index>0)&&(index<4))) {
+                    return(
+                   <>
+                    {
+                      (index===2)?<LastBoxes isBorder={true} cat={item.cat} desc={item.description} title={item.heading} />:
+                      <LastBoxes isBorder={true} cat={item.cat} desc={item.description} title={item.heading} />
+                    }
+                   </>
+                    )
+                   } else {
+                    return(
+                      <>
+                      </>
+                    )
+                   } 
+                })
+              }
+          {/* <LastBoxes />
+         
+          <LastBoxes /> */}
         </div>
       </div>
     </>

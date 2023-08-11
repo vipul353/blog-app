@@ -14,7 +14,7 @@ const Fittness = () => {
     <div className="bolyColm-one">
      <Titles title={'Fittness'}/>
      {data.map((item, index) => {
-          if (item.cat === "fitness" && index >= 30 && index <= 36) {
+          if (item.cat === "fitness" && index >= 37 && index <= 43) {
             return (
               <HorizontalCards
                 key={index}
@@ -35,13 +35,13 @@ const Fittness = () => {
       <Titles title={'Top Posts'}/>
       {data.map((item, index) => {
           console.log();
-          if (item.cat === "fitness" && index >= 37 && index < 39) {
+          if (item.cat === "fitness" && index >= 44 && index <= 48) {
             return (
               <>
                 {
-                  (index === 37)&& <Horizontalmedium cat={item.cat} image={item.image} index={index} title={item.Heading}/>
+                  (index === 44)&& <Horizontalmedium cat={item.cat} image={item.image} index={index} title={item.Heading}/>
                 }
-               { (index >= 38 && index < 39)&&<HorizontalSmall
+               { (index >= 45 && index <= 48)&&<HorizontalSmall
                   key={index}
                   title={item.Heading}
                   index={index}

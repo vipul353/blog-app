@@ -24,20 +24,13 @@ const Bollywood = () => {
                 image={item.image}
                 description={item.description}
                 cat={item.cat}
+                
               />
             );
           } else {
             return <></>;
           }
         })}
-        {/* <HorizontalCards/>
-       <HorizontalCards/>
-       <HorizontalCards/>
-       <HorizontalCards/>
-       <HorizontalCards/>
-       <HorizontalCards/>
-       <HorizontalCards/> */}
-        {/* <HorizontalCards/> */}
       </div>
       <div className="bolyColm-two">
         <Titles title={"Top Posts"} />
