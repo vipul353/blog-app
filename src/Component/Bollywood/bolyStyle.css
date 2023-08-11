@@ -25,3 +25,17 @@
     /* gap: 3.0rem; */
     width: 37%;
 }
+
+@media screen and (max-width:425px) {
+    .BolyMain{
+        padding-inline: 0rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3.0rem;
+        padding-top: 4.0rem;
+    }
+    
+  }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./blog.css";
+import "../BlogNav/BlogNav.css";
 import Avatar from "../Assets/avatar.png";
 import FaceBook from "../Assets/facebook.svg";
 import instagram from "../Assets/instagram.svg";
