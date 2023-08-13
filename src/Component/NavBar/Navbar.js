@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./nav.css";
 import { Link } from "react-router-dom";
 function Navbar() {
+  const [isclicked, setIsclicked] = useState(false);
   return (
     <>
       <div className="mainNav">
+        <div className="title-ham">
         <div className="title">
           <span className="title-the">THE</span>
           <span className="title-siren">Siren</span>
         </div>
-        <div className="nv-link">
+        <div className={isclicked?"hide-block":"ham-clm"} onClick={()=>{setIsclicked(!isclicked)}}>
+           <span className="ham-line"></span>
+           <span className="ham-line"></span>
+           <span className="ham-line"></span> 
+        </div>
+        <div className={isclicked?"cross":"hide-block"} onClick={()=>{setIsclicked(!isclicked)}}>
+           +
+        </div>
+        </div>
+      
+        <div className={isclicked?"nv-link":"hide-flex"}>
           <Link to={'/'} className="span">Home</Link>
           <Link to={'/Bollywood'} className="span">Bollywood</Link>
           <Link to={'/Techonoly'} className="span">Technology</Link>

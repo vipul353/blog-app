@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: start-flex;
-    /* gap: 2.5rem; */
+    gap: 0rem;
     /* gap: 2.5rem; */
 }
 
@@ -77,4 +77,24 @@
    flex-direction: column;
    justify-content: flex-start;
    align-items: center; 
+}
+
+@media screen and (max-width:425px) {
+    .hori-small{
+        height: 19.2rem;
+        width: 64rem;
+    }
+
+    .hori-img{
+        height: 13.5rem;
+        width: 16rem;
+    }
+
+    .hori-clm{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start-flex;
+        gap: 2.5rem;
+    }
 }

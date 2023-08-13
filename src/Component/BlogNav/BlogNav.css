@@ -9,7 +9,7 @@
 }
 
 
-.title {
+.Blog-nav-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
     cursor: pointer;
   }
   
-  .title-the {
+  .Blog-nav-title-the {
     transform: rotate(90deg);
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +27,7 @@
     opacity: 1;
   }
   
-  .title-siren{
+  .Blog-nav-title-siren{
       font-weight: bold;
       font-family: 'Montserrat', sans-serif;
       font-size: 6.2rem;

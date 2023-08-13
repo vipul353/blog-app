@@ -57,8 +57,9 @@ const BlogDetails = () => {
           }}
         >
           <img src={image} className="more-serien-img" alt="no data" />
+         <div className="tit-clm">
           <span className="more-serien-title">{title}</span>
-          <div className="bg-row">
+         <div className="bg-row">
             <div className="bg-inner-row-an">
               <img src={Avatar} alt="no data" className="avt" />
               <div className="blog-clm">
@@ -67,6 +68,7 @@ const BlogDetails = () => {
               </div>
             </div>
           </div>
+         </div>
         </div>
       </>
     );
@@ -75,9 +77,9 @@ const BlogDetails = () => {
   return (
   <>
  <div className="Blog-nav-main" ref={top}>
-      <div className="title" onClick={()=>{navigate('/')}}>
-        <span className="title-the">THE</span>
-        <span className="title-siren">Siren</span>
+      <div className="Blog-nav-title" onClick={()=>{navigate('/')}}>
+        <span className="Blog-nav-title-the">THE</span>
+        <span className="Blog-nav-title-siren">Siren</span>
       </div>
       <button className="button">Get Started</button>
     </div>
@@ -88,7 +90,7 @@ const BlogDetails = () => {
         </span>
         <div className="bg-row">
           <div className="bg-inner-row">
-            <img src={Avatar} alt="no data" />
+            <img src={Avatar} alt="no data" className="blog-img-avt" />
             <div className="blog-clm">
               <span className="blog-auth">Dmitry Nozhenko</span>
               <span className="blog-date">Jan 28, 2019 · 10 min read</span>
@@ -124,7 +126,7 @@ const BlogDetails = () => {
         </div>
         <div className="bg-row-an">
           <div className="bg-inner-row">
-            <img src={Avatar} alt="no data" />
+            <img src={Avatar} alt="no data" className="blog-img-avt" />
             <div className="blog-clm">
               <span className="blog-auth">Dmitry Nozhenko</span>
               <span className="blog-date">Jan 28, 2019 · 10 min read</span>

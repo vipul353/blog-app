@@ -9,15 +9,16 @@ import Food from "./Component/Food/Food";
 import AllData from "./Data/AllData";
 import { createContext,useState } from 'react'
 import BlogDetails from "./Component/BlogDetails/BlogDetails";
+// import Navbar from "./Component/NavBar/Navbar";
 export const contextApi = createContext();
+
 
 function App() {
   const [data] = useState(AllData);
   return (
     <>
-   {/* <div style={{height:'100vh'}}>
-   <BlogNav/>
-   </div> */}
+
+     
     <contextApi.Provider value={data}>
      
       <Routes>

@@ -42,3 +42,16 @@
     display: block;
    
 }
+
+@media screen and (max-width:425px) {
+    .medi-main{
+        height: 46rem;
+        width: 100%;
+    }
+
+    .medi-img{
+        height: 30rem;
+        width: 100%;
+    }
+}
+

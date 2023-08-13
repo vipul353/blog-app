@@ -32,6 +32,10 @@ body {
   html{
     font-size: 27.5%;
   }
+
+  .title {
+    justify-content: space-between;
+  }
   
 }
 
