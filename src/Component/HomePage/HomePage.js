@@ -7,7 +7,7 @@ import HorizontalSmall from "../GenricComponents/HorizontalSmall/HorizontalSmall
 import bgImage from "../Assets/bg-image.jpg";
 import { contextApi } from "../../App";
 import Navbar from "../NavBar/Navbar";
-
+import { useNavigate } from "react-router-dom";
 
 export const Titles = ({ title }) => {
   return (
@@ -18,10 +18,11 @@ export const Titles = ({ title }) => {
 };
  
 
-const LastBoxes = ({isBorder,title,desc,cat}) => {
+const LastBoxes = ({index,isBorder,title,desc,cat}) => {
+  const navigate = useNavigate('');
   return (
     <>
-      <div className="last-boxes" style={isBorder?{borderInline:'3px solid #F0F0F0'}:{borderInline:'none'}}>
+      <div className="last-boxes" onClick={()=>{navigate(`/blogdetails/${index}`)}} style={isBorder?{borderInline:'3px solid #F0F0F0'}:{borderInline:'none'}}>
         <span className="last-boxes-title">
           {title}
           {/* Catch waves with an adventure guide */}
@@ -118,12 +119,11 @@ const HomePage = () => {
         {
                 data.map((item,index)=>{
                   console.log();
-                   if ((item.cat === 'bollywood')&&((index>0)&&(index<4))) {
+                   if ((item.cat === 'bollywood')&&((index>=0)&&(index<=2))) {
                     return(
                    <>
                     {
-                      (index===2)?<LastBoxes isBorder={true} cat={item.cat} desc={item.description} title={item.heading} />:
-                      <LastBoxes isBorder={true} cat={item.cat} desc={item.description} title={item.heading} />
+                      <LastBoxes index={index} isBorder={true} cat={item.cat} desc={item.description} title={item.heading} />
                     }
                    </>
                     )

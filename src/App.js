@@ -9,6 +9,7 @@ import Food from "./Component/Food/Food";
 import AllData from "./Data/AllData";
 import { createContext,useState } from 'react'
 import BlogDetails from "./Component/BlogDetails/BlogDetails";
+import Footer from "./Component/Footer/Footer";
 // import Navbar from "./Component/NavBar/Navbar";
 export const contextApi = createContext();
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Food" element={<Food/>}/>
         <Route path="/blogdetails/:id" element={<BlogDetails/>}/>
       </Routes>
+      <Footer/>
       </contextApi.Provider>
     </>
   );
