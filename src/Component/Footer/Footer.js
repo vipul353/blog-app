@@ -8,7 +8,7 @@ function Footer() {
         <div className="row overflow">
           {/* Column1 */}
           <div className="col overflow">
-            <h4>THICC MEMES INC</h4>
+            <h4>Siren</h4>
             <h1 className="list-unstyled overflow">
               <li>342-420-6969</li>
               <li>Moscow, Russia</li>
