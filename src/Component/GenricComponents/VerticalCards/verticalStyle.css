@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0rem;
 }
 /* font: normal normal medium 32px/39px Montserrat; */
 .crd-txt-heading{
@@ -63,4 +64,21 @@
     font-size: 1.7rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
+}
+
+@media screen and (max-width:425px) {
+    .main-ver-cards{
+        height: 53.2rem;
+        width: 100%;
+    }
+
+    .crd-img{
+        width: 100%;
+        height: 32rem;
+    }
+    .crd-txt{
+        gap: 1rem;
+    }
+
+    
 }

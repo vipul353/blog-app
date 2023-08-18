@@ -40,6 +40,8 @@
     width: 100%;
     height: 70.0rem;
     border: 2px solid black;
+    overflow: 
+    hidden;
 }
 
 .home-bg-img{
@@ -58,6 +60,7 @@
     padding-block: 3.0rem;
     border-bottom: 3px solid #F0F0F0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
@@ -115,4 +118,38 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   overflow: hidden;
+}
+
+@media screen and (max-width:425px) {
+  .HomeMain{
+    padding-inline: 6rem;
+
+  }
+  .home-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2.0rem;
+    flex-direction: column;
+  }
+
+  .home-clm-width{
+    width: 100%;
+    padding-left: 0rem;
+
+  }
+
+  .ads{
+    width: 77%;
+  }
+  .last-box{
+    flex-direction: column;
+    height: 85rem;
+    
+  }
+
+  .last-boxes{
+    width: 100%;
+    justify-content: space-evenly;
+  }
 }
